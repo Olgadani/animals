@@ -37,4 +37,15 @@ public class Mammals extends Animals{
     public void move() {
 
     }
+
+    public void walking() {
+    }
+
+    @Override
+    public String toString() {
+        return "Mammals{" +
+                "areal='" + areal + '\'' +
+                ", speed=" + speed +
+                "} " + super.toString();
+    }
 }
