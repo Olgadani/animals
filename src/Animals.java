@@ -21,6 +21,14 @@ public abstract class Animals {
 
     public abstract void move();
 
+    @Override
+    public String toString() {
+        return "Animals{" +
+                "age=" + age +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
     public static String checkDefault(String value, String error) {
         if (value == null || value.isBlank()) {
             return error;
