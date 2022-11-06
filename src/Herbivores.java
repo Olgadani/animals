@@ -1,18 +1,14 @@
 import java.util.Objects;
 
 public class Herbivores extends Mammals {
-    String eatType;
+    private final String eatType;
     public Herbivores(int age, String name, String areal, int speed, String eatType) {
         super(age, name, areal, speed);
-        setEatType(eatType);
+        this.eatType = checkDefault(eatType, "Информация не указана");
     }
 
     public String getEatType() {
         return eatType;
-    }
-
-    public void setEatType(String eatType) {
-        this.eatType = checkDefault(eatType, "Информация не указана");
     }
 
     @Override
@@ -55,9 +51,9 @@ public class Herbivores extends Mammals {
     @Override
     public String toString() {
         return "Herbivores{" +
-                "eatType='" + eatType + '\'' +
-                ", areal='" + areal + '\'' +
-                ", speed=" + speed +
+                "eatType='" + getEatType() + '\'' +
+                ", areal='" + getAreal() + '\'' +
+                ", speed=" + getSpeed() +
                 "} " + super.toString();
     }
 }

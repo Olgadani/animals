@@ -11,26 +11,27 @@ public class Birds extends Animals{
 
     @Override
     public void eat() {
-
+        System.out.println("Ем много - высокий метаболизм");
     }
 
     @Override
     public void sleep() {
-
+        System.out.println("Сплю мало - надо есть");
     }
 
     @Override
     public void move() {
-
+        System.out.println("Перемещаюсь по-разному - зависит от вида");
     }
 
     public void hunting() {
+        System.out.println("Охочусь - кушать хочется");
     }
 
     @Override
     public String toString() {
         return "Birds{" +
-                "areal='" + areal + '\'' +
+                "areal='" + getAreal() + '\'' +
                 "} " + super.toString();
     }
 }

@@ -1,7 +1,7 @@
 import java.util.Objects;
 
 public class Notflying extends Birds{
-    String movingType;
+    private final String movingType;
     public Notflying(int age, String name, String areal, String movingType) {
         super(age, name, areal);
         this.movingType = checkDefault(movingType, "Информация не указана");
@@ -26,19 +26,22 @@ public class Notflying extends Birds{
 
     @Override
     public void eat() {
-
+        System.out.println("Ем чего поймаю");
     }
 
     @Override
     public void sleep() {
+        System.out.println("Сплю как наемся");
     }
 
     @Override
     public void move() {
+        System.out.println("Хожу пешком");
     }
 
     @Override
     public void hunting() {
+        System.out.println("Охочусь");
     }
 
     public void walking() {
@@ -48,8 +51,8 @@ public class Notflying extends Birds{
     @Override
     public String toString() {
         return "Notflying{" +
-                "movingType='" + movingType + '\'' +
-                ", areal='" + areal + '\'' +
+                "movingType='" + getMovingType() + '\'' +
+                ", areal='" + getAreal() + '\'' +
                 "} " + super.toString();
     }
 }

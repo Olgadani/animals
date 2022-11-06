@@ -1,7 +1,7 @@
 import java.util.Objects;
 
 public class Amphibians extends Animals{
-    String areal;
+    private final String areal;
     public Amphibians(int age, String name, String areal) {
         super(age, name);
         this.areal = checkDefault(areal, "Информация не указана");
@@ -46,7 +46,7 @@ public class Amphibians extends Animals{
     @Override
     public String toString() {
         return "Amphibians{" +
-                "areal='" + areal + '\'' +
+                "areal='" + getAreal() + '\'' +
                 "} " + super.toString();
     }
 }
